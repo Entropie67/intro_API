@@ -3,3 +3,41 @@
 body {
     background-color: grey;
 }
+
+article {
+    border: black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.Pyro {
+    background-color: indianred;
+}
+
+.Hydro {
+    background-color: dodgerblue;
+}
+
+.Cryo {
+    background-color: ghostwhite;
+}
+
+.Geo {
+    background-color: yellow;
+}
+
+.Dendro {
+    background-color: forestgreen;
+}
+
+.Anemo {
+    background-color: cadetblue;
+}
+.Electro {
+    background-color: mediumpurple;
+}

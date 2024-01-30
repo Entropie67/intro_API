@@ -5,11 +5,13 @@ const root_url = "https://gsi.fly.dev/"
 
 // Ajoutons les personnages sur la page :
 const addPerso = (data) => {
-
     for (perso of data['results']) {
-        result.innerHTML += `<article>${perso['name']}</article>`;
+        result.innerHTML += `<article class="${perso['vision']}">
+                                <h2>${perso['name']}</h2>
+                                <p>Element : ${perso['vision']}</p>
+                                <a href="${perso['wiki_url']}">wiki_url</a>
+                             </article>`;
     }
-
 }
 
 
