@@ -1,21 +1,19 @@
 
 // réccupère la balise d'id result
 result = document.querySelector('#result');
-
-// Travail sur l'API
-
-// On fait un test avec des données locales
-let personnages = [
-                                            {"id": 1, "name": "Henri"},
-                                            {"id": 2, "name": "Charlotte"}
-                                            ];
-
-
+const root_url = "https://gsi.fly.dev/"
 
 // Ajoutons les personnages sur la page :
-for (perso of personnages){
-    // += plutôt que = pour ajouter les personnages les uns à la suite des autres
-    result.innerHTML += ` <p>Personnage : ${perso.name}</p>`; // les " " sont ceux du 7 !! ` `
+const addPerso = (data) => {
+        result.innerHTML += data['results'][1]['name'];
 }
 
 
+// Travail sur l'API
+const getInfo = async() => {
+    let response = await fetch(root_url + "characters");
+    let data = await response.json();
+    addPerso(data);
+}
+
+getInfo();
