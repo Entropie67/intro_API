@@ -3,9 +3,16 @@
 body {
     background-color: grey;
 }
-
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
+}
 article {
-    border: black;
+    border: solid black;
     border-radius: 5px;
     margin: 5px;
     padding: 10px;
